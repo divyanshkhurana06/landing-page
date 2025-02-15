@@ -6,9 +6,10 @@
     <title>Apple Landing Page</title>
     <link rel="stylesheet" href="try.css">
     <script defer src="back.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@3.3.1/dist/model-viewer.min.js"></script>
+    <script src = "https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-
     <nav class="navbar">
         <div class="nav-left">
             <img src="apple-logo.png" alt="Apple Logo" class="apple-icon">
@@ -27,21 +28,20 @@
             <img src="search-icon.png" alt="Search" class="nav-icon">
         </div>
     </nav>
-
     <section class="hero" style="background-image: url('hero-bg.jpg');">
         <div class="hero-content">
-        
+
         </div>
-    
+
         <div class="holi-message">
             <h2>Happy Holi!</h2>
             <p>Celebrate the festival of colors with the latest Apple gadgets.</p>
             <button class="shop-now">Shop</button>
         </div>
     </section>
-    
 
-    <div class="product-page" style="background-image: url('nokia-background.jpeg');">  <img src="nokia-16-pro.png" alt="Nokia 16 Pro" class="product-image">
+    <div class="product-page" style="background-image: url('nokia-background.jpeg');">
+        <div class="product-image" onclick="playAudio()"> <img src="nokia-16-pro.png" alt="Nokia 16 Pro"> </div>
         <div class="product-overlay">
             <h1>Nokia 3310 <span class="pro-style">Pro</span></h1>
             <p>Hello, Non-Breakable Intelligence.</p>
@@ -51,30 +51,170 @@
             </div>
         </div>
     </div>
+<!-- 
+    <div class="product-page" style="background-image: url('kk.jpg');">  
+        <div class="product-overlay">
+            <h1>Iphone 13 <span class="pro-style">Mini</span></h1>  <p>Its not about the size.Its about the performance.</p>  <div class="button-group">
+                <button>Learn more</button>
+                <button>Buy</button>
+            </div>
+            <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                <model-viewer 
+                    src="your-3d-model.glb"  alt="3D Model"
+                    ar 
+                    auto-rotate
+                    camera-controls
+                    style="width: 200px; height: 200px;"  ></model-viewer>
+            </div>
+        </div>
+    </div> -->
 
-    <section class="product iphone-14" style="background-image: url('iphone-14.jpg');">
-        <div class="content">
-            <h2>iPhone 14</h2>
-            <p>Still powerful, still iconic.</p>
-            <button>Shop Now</button>
+    <!-- <section class="bento-grid" style="background-image: url('bento-bg.jpg');">
+        <div class="bento-item">
+            <img src="apple-watch-ultra.jpg" alt="Apple Watch Ultra">
+            <h2>Apple Watch Ultra</h2>
+            <p>The watch that knows no limits.</p>
+            <div class="bento-buttons">
+                <a href="#" class="learn-more">Learn more</a>
+                <a href="#" class="buy">Buy</a>
+            </div>
+        </div>
+        <div class="bento-item">
+            <img src="macbook-air-m2.png" alt="MacBook Air">
+            <h2>MacBook Air</h2>
+            <p>Thin. Light. Might.</p>
+            <div class="bento-buttons">
+                <a href="#" class="learn-more">Learn more</a>
+                <a href="#" class="buy">Buy</a>
+            </div>
+        </div>
+        <div class="bento-item">
+            <img src="ipad-pro.jpg" alt="iPad Pro">
+            <h2>iPad Pro</h2>
+            <p>The ultimate iPad experience.</p>
+            <div class="bento-buttons">
+                <a href="#" class="learn-more">Learn more</a>
+                <a href="#" class="buy">Buy</a>
+            </div>
+        </div>
+        <div class="bento-item">
+            <img src="airpods-gen-3.jpg" alt="AirPods">
+            <h2>AirPods</h2>
+            <p>Wireless. Effortless. Magical.</p>
+            <div class="bento-buttons">
+                <a href="#" class="learn-more">Learn more</a>
+                <a href="#" class="buy">Buy</a>
+            </div>
+        </div>
+    </section> -->
+
+  
+<section class="min-h-screen bg-gradient-to-b from-zinc-900 to-black text-white">
+
+
+
+
+    <div class="max-w-7xl mx-auto px-4 py-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="relative group bg-gradient-to-br from-zinc-900 to-black rounded-3xl p-8 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-white/10">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <h3 class="text-2xl font-bold mb-4">MacBook Pro</h3>
+                <p class="text-gray-400 mb-6">Supercharged by codechef vit</p>
+                <img 
+                    src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1026&q=80"
+                    alt="MacBook Pro"
+                    class="w-full h-48 object-cover rounded-xl mb-6 transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div class="flex space-x-4">
+                    <button class="bg-white text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+                        Buy
+                    </button>
+                    <button class="text-white hover:text-gray-300 transition-colors">
+                        Learn more →
+                    </button>
+                </div>
+            </div>
+
+            
+            <div class="relative group bg-gradient-to-br from-zinc-900 to-black rounded-3xl p-8 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-white/10">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <h3 class="text-2xl font-bold mb-4">Windows Pro</h3>
+                <p class="text-gray-400 mb-6">Supports Subway Surfers.</p>
+                <img 
+                    src="https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Mac Studio"
+                    class="w-full h-48 object-cover rounded-xl mb-6 transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div class="flex space-x-4">
+                    <button class="bg-white text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+                        Buy
+                    </button>
+                    <button class="text-white hover:text-gray-300 transition-colors">
+                        Learn more →
+                    </button>
+                </div>
+            </div>
+
+            
+            <div class="relative group bg-gradient-to-br from-zinc-900 to-black rounded-3xl p-8 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-white/10">
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-rose-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <h3 class="text-2xl font-bold mb-4">iMac</h3>
+                <p class="text-gray-400 mb-6">Say hello to your empty wallet after buying this.</p>
+                <img 
+                    src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="iMac"
+                    class="w-full h-48 object-cover rounded-xl mb-6 transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div class="flex space-x-4">
+                    <button class="bg-white text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+                        Buy
+                    </button>
+                    <button class="text-white hover:text-gray-300 transition-colors">
+                        Learn more →
+                    </button>
+                </div>
+            </div>
+
+            
+            <div class="relative group bg-gradient-to-br from-zinc-900 to-black rounded-3xl p-8 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-white/10">
+                <div class="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <h3 class="text-2xl font-bold mb-4">Apple vision pro</h3>
+                <p class="text-gray-400 mb-6">It does go crazy in vr test it out. Go and press the nokia phone</p>
+                <img 
+                    src="https://images.unsplash.com/photo-1624913503273-5f9c4e980dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Mac Pro"
+                    class="w-full h-48 object-cover rounded-xl mb-6 transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div class="flex space-x-4">
+                    <button class="bg-white text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+                        Buy
+                    </button>
+                    <button class="text-white hover:text-gray-300 transition-colors">
+                        Learn more →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="py-24 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-center mb-12">
+                <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a9.96 9.96 0 0 1 7.071 2.929A9.96 9.96 0 0 1 22 12a9.96 9.96 0 0 1-2.929 7.071A9.96 9.96 0 0 1 12 22a9.96 9.96 0 0 1-7.071-2.929A9.96 9.96 0 0 1 2 12a9.96 9.96 0 0 1 2.929-7.071A9.96 9.96 0 0 1 12 2z"/>
+                </svg>
+                <h2 class="text-3xl font-bold">Apple TV+ Originals</h2>
+            </div>
+            <div class="relative overflow-hidden rounded-2xl">
+                <div id="tv-slider" class="relative h-[400px] transition-transform duration-700 ease-out flex">
+                    <!-- Slides will be dynamically added here -->
+                </div>
+                <div id="tv-dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <!-- Dots will be dynamically added here -->
+                </div>
+            </div>
         </div>
     </section>
-
-    <section class="bento-grid" style="background-image: url('bento-bg.jpg');">
-        <div class="bento-item">MacBook Air</div>
-        <div class="bento-item">Apple Watch</div>
-        <div class="bento-item">AirPods</div>
-        <div class="bento-item">Accessories</div>
-    </section>
-
-    <section class="apple-tv-slider" style="background-image: url('tv-bg.jpg');">
-        <h2>Apple TV+ Originals</h2>
-        <div class="slider">
-            <div class="slide"><img src="show1.jpg" alt="Show 1"></div>
-            <div class="slide"><img src="show2.jpg" alt="Show 2"></div>
-            <div class="slide"><img src="show3.jpg" alt="Show 3"></div>
-        </div>
-    </section>
-
 </body>
+
 </html>

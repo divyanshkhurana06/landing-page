@@ -19,14 +19,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(255, 255, 255, 0.9); /* Keep this for a slight translucency */
+    background: rgba(255, 255, 255, 0.9);
     padding: 10px 20px;
-    /* backdrop-filter: blur(10px);  Remove or comment out the blur if you don't want it */
-    background-color: white; /* Make the background fully opaque */
+    background-color: white;
     z-index: 10;
 }
 
-.nav-left, .nav-right {
+.nav-left,
+.nav-right {
     display: flex;
     align-items: center;
 }
@@ -34,7 +34,6 @@ body {
 .apple-icon {
     width: 54px;
 }
-
 
 .nav-links {
     list-style: none;
@@ -65,7 +64,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-image: url('nokia-background.jpeg'); /* Correct path! */
+    background-image: url('nokia-background.jpeg');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -76,15 +75,15 @@ body {
 
 .product-image {
     position: relative;
-    max-width: 50%; /* Adjust as needed */
+    max-width: 50%;
     height: auto;
     transform-style: preserve-3d;
-    transform: rotateY(-10deg) rotateX(5deg);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-    /* transform: rotateY(-10deg) rotateX(5deg); Adjust rotation; */
-    margin-top: 50px;
+    transform: rotateY(-10deg) rotateX(8deg);
+    margin-top: 120px;
+    max-width: 60%;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.6));
 }
+
 
 .product-image:hover {
     transform: rotateY(-18deg) rotateX(12deg) scale(1.05);
@@ -95,11 +94,13 @@ body {
     max-width: 100%;
     height: auto;
     display: block;
+    outline : none; 
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.6));
 }
 
 .product-overlay {
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -109,16 +110,22 @@ body {
 }
 
 .product-overlay h1 {
-    font-size: 3em;
-    margin-bottom: 5px;
-    color: #ffcc00;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #66ff99;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.product-overlay .pro-style {
+    -webkit-text-stroke: 2px #66ff99;
+    color: transparent;
 }
 
 .product-overlay p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    color: #ffcc00;
-
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #c0c0c0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .button-group {
@@ -128,22 +135,50 @@ body {
 }
 
 .button-group button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    background-color: rgba(0, 123, 255, 0.7);
-    color: rgb(66, 102, 222);
+    background-color: #66ff99;
+    color: #1a242f;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button-group button:hover {
-    background-color: rgba(0, 123, 255, 0.9);
+    background-color: #52c480;
+    color: #000;
+}
+
+
+.product-image1 {
+    position: relative;
+    max-width: 50%;
+    height: auto;
+    transform-style: preserve-3d;
+    transform: rotateY(-10deg) rotateX(8deg);
+    max-width: 60%;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.6));
+}
+
+.product-image1:hover {
+    transform: rotateY(-18deg) rotateX(12deg) scale(1.05);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+}
+
+.product-image1 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    outline: none;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.6));
 }
 
 /* Sections */
-.hero, .product, .bento-grid, .apple-tv-slider {
+.hero,
+.product,
+.bento-grid,
+.apple-tv-slider {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -156,64 +191,95 @@ body {
 .product {
     text-align: center;
 }
-
+.bento-container {
+    width: 100%;
+    max-width: 1200px; /* Limits excessive width */
+    margin: 0 auto;
+    padding: 20px;
+}
 .bento-grid {
+    height: 100vh; /* Full viewport height */
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 50px;
-    background-color: #f5f5f7; /* Added background color to the bento grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusts column count based on screen size */
+    gap: 20px; /* Gap between items */
+    padding: 40px; /* Padding around the grid */
+    background-color: #f5f5f7; /* Light background color */
+    align-items: stretch; /* Ensures items stretch to fill the height */
+    box-sizing: border-box; /* Ensures padding is included in height calculation */
 }
 
 .bento-item {
     background: white;
-    padding: 100px 20px; /* Adjusted padding */
-    border-radius: 60px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center; /* Center the text within the bento items */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Vertically center content */
-}
-.product .content{
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
-}
-.product h2{
-    color: white;
-}
-.product p{
-    color: white;
-}
-.product button{
-    padding: 12px 24px;
-    background-color: #007aff;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-/* Apple TV Slider */
-.apple-tv-slider {
-    padding: 50px 0;
-}
-
-.slider {
-    display: flex;
     overflow: hidden;
-    width: 80%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.slide {
-    min-width: 100%;
-    transition: transform 0.5s ease-in-out;
+.bento-item:hover {
+    transform: scale(1.03); /* Slight scale up on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
+
+.bento-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.bento-item h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333; /* Darker heading color */
+}
+
+.bento-item p {
+    font-size: 1em;
+    color: #666; /* Slightly lighter text color */
+    margin-bottom: 20px;
+}
+
+.bento-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.bento-buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.learn-more {
+    background-color: #eee; /* Light gray for Learn More */
+    color: #333;
+}
+
+.learn-more:hover {
+    background-color: #ddd;
+}
+
+.buy {
+    background-color: #007aff; /* Blue for Buy */
+    color: white;
+}
+
+.buy:hover {
+    background-color: #005ecb;
+}
+
+
 
 /* Holi Text at Bottom */
 .holi-message {
@@ -222,20 +288,19 @@ body {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    /* Add styles to improve readability against the hero image */
-     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Example text shadow */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .holi-message h2 {
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: white; /* Changed to white for better visibility */
+    color: white;
 }
 
 .holi-message p {
     font-size: 18px;
-    color: #e0e0e0; /* Slightly lighter gray */
+    color: #e0e0e0;
 }
 
 /* Blue Shop Now Button */
@@ -244,7 +309,6 @@ body {
     background-color: #007aff;
     color: white;
     font-size: 18px;
-    /* font-weight: bold; */
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -255,3 +319,65 @@ body {
     background-color: #005ecb;
 }
 
+
+.iphone-mini-page { /* Specific styles for the iPhone Mini page */
+    background-image: url('kk.jpg'); /* New background */
+}
+
+.iphone-mini-page .product-overlay { /* iPhone Mini overlay styles */
+    color: #007AFF;/* Example: Pink text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.iphone-mini-page .product-overlay h1 {
+    color: #194d4e;
+}
+
+.iphone-mini-page .product-overlay p {
+    color: #ADD8E6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.iphone-mini-page .button-group button { /* iPhone Mini button styles */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.iphone-mini-page .button-group button:nth-child(1) { /* Learn More Button */
+    background-color: #FF69B4; /* Pink */
+    color: white;
+}
+
+.iphone-mini-page .button-group button:nth-child(2) { /* Buy Button */
+    background-color: #ADD8E6; /* Light Blue */
+    color: #333;
+}
+
+
+
+.iphone-mini-page model-viewer { /* For the 3D model */
+    --poster-color: transparent;
+}
+
+.model-container {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 5; /* Ensure it's above the background */
+}
+
+/* Adjust the size and appearance of the 3D model */
+model-viewer {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
