@@ -6,7 +6,8 @@
     <title>Apple Landing Page</title>
     <link rel="stylesheet" href="try.css">
     <script defer src="back.js"></script>
-    <script type="module" src="https://unpkg.com/@google/model-viewer@3.3.1/dist/model-viewer.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@latest"></script>
+
     <script src = "https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -51,69 +52,32 @@
             </div>
         </div>
     </div>
-<!-- 
-    <div class="product-page" style="background-image: url('kk.jpg');">  
-        <div class="product-overlay">
-            <h1>Iphone 13 <span class="pro-style">Mini</span></h1>  <p>Its not about the size.Its about the performance.</p>  <div class="button-group">
-                <button>Learn more</button>
-                <button>Buy</button>
-            </div>
-            <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
-                <model-viewer 
-                    src="your-3d-model.glb"  alt="3D Model"
-                    ar 
-                    auto-rotate
-                    camera-controls
-                    style="width: 200px; height: 200px;"  ></model-viewer>
-            </div>
-        </div>
-    </div> -->
 
-    <!-- <section class="bento-grid" style="background-image: url('bento-bg.jpg');">
-        <div class="bento-item">
-            <img src="apple-watch-ultra.jpg" alt="Apple Watch Ultra">
-            <h2>Apple Watch Ultra</h2>
-            <p>The watch that knows no limits.</p>
-            <div class="bento-buttons">
-                <a href="#" class="learn-more">Learn more</a>
-                <a href="#" class="buy">Buy</a>
-            </div>
+    <!-- <section class="h-screen w-full flex flex-col items-center justify-center bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-white text-center">
+        <h1 class="text-5xl font-extrabold drop-shadow-lg">iPhone 13 mini</h1>
+        <div class="mt-4 flex gap-4">
+            <button class="bg-white text-black px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors">Buy Now</button>
+            <button class="bg-transparent border border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black transition-colors">Learn More</button>
         </div>
-        <div class="bento-item">
-            <img src="macbook-air-m2.png" alt="MacBook Air">
-            <h2>MacBook Air</h2>
-            <p>Thin. Light. Might.</p>
-            <div class="bento-buttons">
-                <a href="#" class="learn-more">Learn more</a>
-                <a href="#" class="buy">Buy</a>
-            </div>
+        <div class="w-full h-96 mt-8">
+             3D Model Viewer -->
+            <!-- <model-viewer 
+                src="iphone13minii.glb" 
+                alt="iPhone 13 mini"
+                ar 
+                auto-rotate
+                camera-controls
+                style="width: 100%; height: 100%;"
+        
+            
+                <div slot="poster">
+                    <p>Loading 3D model...</p>
+                </div>
+            </model-viewer>
         </div>
-        <div class="bento-item">
-            <img src="ipad-pro.jpg" alt="iPad Pro">
-            <h2>iPad Pro</h2>
-            <p>The ultimate iPad experience.</p>
-            <div class="bento-buttons">
-                <a href="#" class="learn-more">Learn more</a>
-                <a href="#" class="buy">Buy</a>
-            </div>
-        </div>
-        <div class="bento-item">
-            <img src="airpods-gen-3.jpg" alt="AirPods">
-            <h2>AirPods</h2>
-            <p>Wireless. Effortless. Magical.</p>
-            <div class="bento-buttons">
-                <a href="#" class="learn-more">Learn more</a>
-                <a href="#" class="buy">Buy</a>
-            </div>
-        </div>
-    </section> -->
+    </section> --> 
 
-  
 <section class="min-h-screen bg-gradient-to-b from-zinc-900 to-black text-white">
-
-
-
-
     <div class="max-w-7xl mx-auto px-4 py-24">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="relative group bg-gradient-to-br from-zinc-900 to-black rounded-3xl p-8 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-white/10">
@@ -207,10 +171,10 @@
             </div>
             <div class="relative overflow-hidden rounded-2xl">
                 <div id="tv-slider" class="relative h-[400px] transition-transform duration-700 ease-out flex">
-                    <!-- Slides will be dynamically added here -->
+        
                 </div>
                 <div id="tv-dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                    <!-- Dots will be dynamically added here -->
+    
                 </div>
             </div>
         </div>

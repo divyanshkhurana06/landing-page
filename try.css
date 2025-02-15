@@ -174,7 +174,7 @@ body {
     filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.6));
 }
 
-/* Sections */
+
 .hero,
 .product,
 .bento-grid,
@@ -193,19 +193,19 @@ body {
 }
 .bento-container {
     width: 100%;
-    max-width: 1200px; /* Limits excessive width */
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 20px;
 }
 .bento-grid {
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusts column count based on screen size */
-    gap: 20px; /* Gap between items */
-    padding: 40px; /* Padding around the grid */
-    background-color: #f5f5f7; /* Light background color */
-    align-items: stretch; /* Ensures items stretch to fill the height */
-    box-sizing: border-box; /* Ensures padding is included in height calculation */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: #f5f5f7; 
+    align-items: stretch; 
+    box-sizing: border-box; 
 }
 
 .bento-item {
@@ -222,8 +222,8 @@ body {
 }
 
 .bento-item:hover {
-    transform: scale(1.03); /* Slight scale up on hover */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: scale(1.03); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
 }
 
 .bento-item img {
@@ -231,18 +231,18 @@ body {
     height: auto;
     display: block;
     margin-bottom: 20px;
-    border-radius: 10px; /* Rounded corners for images */
+    border-radius: 10px; 
 }
 
 .bento-item h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    color: #333; /* Darker heading color */
+    color: #333;
 }
 
 .bento-item p {
     font-size: 1em;
-    color: #666; /* Slightly lighter text color */
+    color: #666;
     margin-bottom: 20px;
 }
 
@@ -262,7 +262,7 @@ body {
 }
 
 .learn-more {
-    background-color: #eee; /* Light gray for Learn More */
+    background-color: #eee; 
     color: #333;
 }
 
@@ -271,7 +271,7 @@ body {
 }
 
 .buy {
-    background-color: #007aff; /* Blue for Buy */
+    background-color: #007aff;
     color: white;
 }
 
@@ -281,7 +281,7 @@ body {
 
 
 
-/* Holi Text at Bottom */
+
 .holi-message {
     position: absolute;
     bottom: 60px;
@@ -303,7 +303,6 @@ body {
     color: #e0e0e0;
 }
 
-/* Blue Shop Now Button */
 .shop-now {
     padding: 12px 24px;
     background-color: #007aff;
@@ -320,12 +319,12 @@ body {
 }
 
 
-.iphone-mini-page { /* Specific styles for the iPhone Mini page */
-    background-image: url('kk.jpg'); /* New background */
+.iphone-mini-page { 
+    background-image: url('kk.jpg');
 }
 
-.iphone-mini-page .product-overlay { /* iPhone Mini overlay styles */
-    color: #007AFF;/* Example: Pink text color */
+.iphone-mini-page .product-overlay { 
+    color: #007AFF;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -338,7 +337,7 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.iphone-mini-page .button-group button { /* iPhone Mini button styles */
+.iphone-mini-page .button-group button { 
     padding: 12px 24px;
     border: none;
     border-radius: 8px;
@@ -347,32 +346,31 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.iphone-mini-page .button-group button:nth-child(1) { /* Learn More Button */
-    background-color: #FF69B4; /* Pink */
+.iphone-mini-page .button-group button:nth-child(1) { 
+    background-color: #FF69B4; 
     color: white;
 }
 
-.iphone-mini-page .button-group button:nth-child(2) { /* Buy Button */
-    background-color: #ADD8E6; /* Light Blue */
+.iphone-mini-page .button-group button:nth-child(2) { 
+    background-color: #ADD8E6; 
     color: #333;
 }
 
 
 
-.iphone-mini-page model-viewer { /* For the 3D model */
+.iphone-mini-page model-viewer { 
     --poster-color: transparent;
 }
 
 .model-container {
     position: absolute;
-    bottom: 20px; /* Adjust as needed */
+    bottom: 20px; 
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 5; /* Ensure it's above the background */
+    z-index: 5; 
 }
 
-/* Adjust the size and appearance of the 3D model */
 model-viewer {
     width: 300px;
     height: 300px;
